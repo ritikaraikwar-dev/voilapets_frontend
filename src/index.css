@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* This adds vertical spacing around the bullets */
+.custom-swiper-pagination .swiper-pagination {
+  @apply mt-8  flex justify-center;
+}
+
+/* Bullet base style */
+.custom-swiper-pagination .swiper-pagination-bullet {
+  @apply w-4 h-4 bg-[#535554]  rounded-full mx-1;
+}
+
+/* Active bullet */
+.custom-swiper-pagination .swiper-pagination-bullet-active {
+  @apply bg-[#121212]   ;
+}
