@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import toast, { Toaster } from 'react-hot-toast';
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 function Login() {
 
@@ -26,7 +27,7 @@ function Login() {
         try {
             e.preventDefault();
 
-            const res = await axios.post('http://localhost:4000/voilapets/userLogin', formData);
+            const res = await axios.post(`${baseUrl}/voilapets/userLogin`, formData);
 
             console.log("user login successfully", res.data);
               toast.success('User Login successfully !');

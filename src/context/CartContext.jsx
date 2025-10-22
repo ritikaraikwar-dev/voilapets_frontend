@@ -14,6 +14,8 @@ export const CartProvider = ({ children }) => {
 
   const [reloadCart, setReloadCart] = useState(false);
   const [cart, setCart] = useState(false);
+  const baseUrl = process.env.REACT_APP_BASE_URL;
+
  
 
   const showCart = () => {
@@ -25,7 +27,7 @@ export const CartProvider = ({ children }) => {
        
       const product = products.find(item => item.id === id);
 
-      const data = await axios.post('http://localhost:4000/voilapets/addCart', product, {
+      const data = await axios.post(`${baseUrl}/voilapets/addCart`, product, {
         withCredentials: true,
       });
 

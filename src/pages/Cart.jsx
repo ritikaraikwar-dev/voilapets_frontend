@@ -5,7 +5,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { circularProgressClasses } from '@mui/material/CircularProgress';
-
+const baseUrl = process.env.REACT_APP_BASE_URL;
 function Cart() {
   const [localCartItems, setLocalCartItems] = useState([]);
   const { cart, setCart, reloadCart, setReloadCart, getGuestId, removeFromCart, clearCart } = useCart();
@@ -17,7 +17,7 @@ function Cart() {
   const deleteCart = async (cartId) => {
 
     try {
-      const cartDelete = await axios.delete(`http://localhost:4000/voilapets/deleteCart/${cartId}`, {
+      const cartDelete = await axios.delete(`${baseUrl}/voilapets/deleteCart/${cartId}`, {
         withCredentials: true
       });
       // Trigger reload so useEffect runs again
@@ -34,7 +34,7 @@ function Cart() {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const res = await axios.get(`http://localhost:4000/voilapets/getCart`, {
+        const res = await axios.get(`${baseUrl}/voilapets/getCart`, {
           withCredentials: true
         });
 

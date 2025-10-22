@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
-
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 function Register() {
 
@@ -77,7 +77,7 @@ function Register() {
         }
 
         try {
-            const res = await axios.post('http://localhost:4000/voilapets/sendVerificationOtp', formData);
+            const res = await axios.post(`${baseUrl}/voilapets/sendVerificationOtp`, formData);
 
             console.log("email sent successfully", res.data);
             setShowOtp(true);
@@ -90,7 +90,7 @@ function Register() {
     const register = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:4000/voilapets/verifyRegistrationOtp', formData);
+            const res = await axios.post(`${baseUrl}/voilapets/verifyRegistrationOtp`, formData);
 
             console.log("register successfully", res.data);
             toast.success('User register successfully !');
