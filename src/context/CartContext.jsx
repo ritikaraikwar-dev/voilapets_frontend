@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import products from '../data/Product';
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
+ 
 const CartContext = createContext();
 
 export const useCart = () => useContext(CartContext);
@@ -27,7 +27,7 @@ export const CartProvider = ({ children }) => {
        
       const product = products.find(item => item.id === id);
 
-      const data = await axios.post(`${baseUrl}/voilapets/addCart`, product, {
+      const data = await axios.post(`${baseUrl}/voilapets/addCart/${id}`, product, {
         withCredentials: true,
       });
 
