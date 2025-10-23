@@ -39,7 +39,7 @@ export const CartProvider = ({ children }) => {
       console.log("data send successfully", data.data.userData);
     }
     catch (error) {
-      console.log(error);
+      console.log(error.message);
     }
   }
 
