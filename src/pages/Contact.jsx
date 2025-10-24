@@ -32,7 +32,7 @@ function Contact() {
                 </div>
                 <div className='py-20'>
                     <div className='flex justify-center'>
-                         
+
 
                         <div className="relative w-2/4 mb-6">
                             <select
@@ -65,7 +65,7 @@ function Contact() {
                         </div>
 
 
-                        
+
                     </div>
 
 
@@ -161,9 +161,6 @@ function Contact() {
                             <form className='w-2/4 px-0 bg-transparent p-6 rounded-md  '>
 
                                 <div className='flex gap-4 mb-4'>
-
-
-
                                     <div className="relative w-full mb-6">
                                         <input
                                             type="text"
@@ -181,9 +178,6 @@ function Contact() {
                                             Name *
                                         </label>
                                     </div>
-
-
-
                                     <div className="relative w-full mb-6">
                                         <input
                                             type="email"
@@ -221,8 +215,6 @@ function Contact() {
                                         Phone Number *
                                     </label>
                                 </div>
-
-
                                 <div className="relative w-full mb-6">
                                     <textarea
                                         id="reason"
@@ -240,10 +232,6 @@ function Contact() {
                                         Reason for Return *
                                     </label>
                                 </div>
-
-
-
-                                
                             </form>
                         )}
 
@@ -330,33 +318,6 @@ function Contact() {
                                         Description of issue(s) *
                                     </label>
                                 </div>
-
-
-
-                                {/* <div className=" w-full  mb-6">
-                                    <label
-                                        htmlFor="file-upload"
-                                        className="block mb-2 text-lg font-medium text-gray-600"
-                                    >
-                                        Upload your file
-                                    </label>
-                                    <input
-                                        id="file-upload"
-                                        type="file"
-                                        className="block w-full flex justify-center text-sm text-gray-600
-                   file:mr-4 file:py-2 file:px-4
-                   file:rounded file:border-0
-                   file:text-sm file:font-semibold
-                   file:bg-[#93A2AE] file:text-white
-                   hover:file:bg-[#7b8993]
-                   cursor-pointer
-                   bg-transparent border border-dashed border-[#93A2AE] rounded p-2
-                   focus:outline-none focus:ring-1 focus:ring-[#93A2AE]"
-                    
-                                    />
-                                    
-                                </div> */}
-
                                 <div className="w-full     mb-6">
                                     <label
                                         htmlFor="file-upload"
@@ -381,7 +342,7 @@ function Contact() {
                                         )}
                                     </label>
                                 </div>
- 
+
                             </form>
                         )}
 
@@ -469,18 +430,18 @@ function Contact() {
                                     </label>
                                 </div>
 
- 
+
                             </form>
                         )}
                     </div>
-                       <div className='w-2/4 mx-auto flex justify-center'>   
-                             <button
-                                    type="submit"
-                                    className=' w-full    bg-[#435870]   text-xl text-white px-4 py-2 rounded  '
-                                >
-                                    Submit
-                                </button>
-                                </div>
+                    <div className='w-2/4 mx-auto flex justify-center'>
+                        <button
+                            type="submit"
+                            className=' w-full    bg-[#435870]   text-xl text-white px-4 py-2 rounded  '
+                        >
+                            Submit
+                        </button>
+                    </div>
                 </div>
             </section>
         </>

@@ -14,7 +14,7 @@ function Navbar() {
 
 
 
-    const [accessories, setAccessories] = useState(false);
+    
 
     const [showNavbar, setShowNavbar] = useState(false)
     const [showNav, setShowNav] = useState(false);
@@ -38,9 +38,7 @@ function Navbar() {
     const { cartItems, showCart } = useCart();
 
     const toggleNavbar = () => setShowNavbar(prev => !prev);
-    const toggleShop = () => setShop(prev => !prev);
-    const toggleUltimate = () => setUltimate(prev => !prev);
-    const toggleAccessories = () => setAccessories(prev => !prev);
+     
 
     return (
         <>

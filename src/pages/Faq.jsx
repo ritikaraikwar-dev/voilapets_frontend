@@ -3,8 +3,6 @@ import faq from '../assets/img/faq.webp';
 import faq2 from '../assets/img/faq2.webp';
 import CloseIcon from '@mui/icons-material/Close';
 import AddIcon from '@mui/icons-material/Add';
-import { Link } from 'react-router-dom';
- 
 
 const faqItems = [
     {
@@ -55,7 +53,7 @@ const faqItems = [
         question: "My treat pouch doesn’t stay open or closes too easily. Can this be fixed? ",
         answer: "The hinge is designed to stay open using friction. If it closes too easily, it could be due to excessive oiling or a faulty spring. Please contact us at support@voilapets.com, and our team will be happy to assist you.",
     },
-     
+
 ]
 function Faq() {
 
@@ -65,13 +63,9 @@ function Faq() {
         setActiveIndex(prev => (prev === index ? null : index));
     };
 
-
-
     return (
         <>
             <section>
-               
-
                 <div className="relative group overflow-hidden">
                     <img
                         src={faq}
@@ -80,8 +74,8 @@ function Faq() {
                     />
                     {/* Overlay */}
                     <div className=" py-36 absolute inset-0 bg-black bg-opacity-20  flex flex-col items-center justify-center px-6 text-white text-center">
-                             
-                         <p className='  text-3xl text-white  font-semibold'>FAQS</p> 
+
+                        <p className='  text-3xl text-white  font-semibold'>FAQS</p>
                         <p className=' text-sm px-6 text-white lg:text-lg  lg:px-36 py-2'>Welcome to our FAQ page! Here you’ll find answers to some of the most frequently asked questions about our products. Whether you’re curious about our policies, need a little help troubleshooting, or just want to know more about what we offer, you’re in the right place! If you don’t find what you’re looking for, don’t hesitate to reach out to our friendly customer support team—we’re here to help!</p>
                     </div>
 
@@ -97,37 +91,6 @@ function Faq() {
                     <div className=' '>
                         <p className='uppercase text-3xl font-bold text-[#4B4D51]'>General Questions</p>
                         <p className='py-4 text-lg text-[#4B4D51]'>Find answers to common questions or get in touch with us for more information!</p>
-                        
-                      {/* <div className="border border-[#ccc] rounded-md mb-4 overflow-hidden transition-all duration-300">
-                           <button
-                                onClick={toggleContent2}
-                                className="flex justify-between items-center w-full bg-white px-4 py-3 text-left text-black focus:outline-none"
-                            >
-                                <span className="text-[#53565A] text-base font-medium">
-                                   Which Size Should I Choose? 
-                                </span>
-                                <span className="ml-4">
-                                    {show2 ? <CloseIcon /> : <AddIcon />}
-                                </span>
-                            </button>
-
-                     
-                            <div
-                                 className={`px-4 overflow-hidden transition-all bg-white duration-200 text-[18px]   text-[#67696D] ${show2 ? 'max-h-[1000px] py-4 opacity-100' : 'max-h-0 opacity-0'
-                                    }`}
-                            >
-                                <p>
-                                   Great question! Choosing between the Standard, Large, or Sealable Edition treat pouch depends on more than just the size or breed of your dog. While capacity is an obvious difference, here are a few key features to consider to help you decide:
-                                </p>
-                                <ul  className='list-disc px-4 mb-2'>
-                                    <li className='my-2'>Standard Pouch: Holds 16 oz of food or treats (about 2 cups of kibble). Its slightly flatter base makes it sit more flush when worn on a belt, offering a sleek and compact option for everyday use. </li>
-                                    <li className='mb-2'>Large Pouch: Holds approximately 24 oz (about 3 cups of kibble) and is almost two inches taller than the Standard. This size is ideal for longer outings, training sessions, or when working with multiple dogs. Its wider base allows the pouch to stand upright, doubling as a convenient water bowl—perfect for outdoor adventures.</li>
-                                    <li className='mb-2'>Sealable Edition: Holding approximately 20 oz, this size offers an airtight seal to keep food fresh and moist over extended periods. It also locks in odors, making it an excellent option for storing treats in your fridge or car without unwanted smells.</li>
-                                    <p>Each pouch is thoughtfully designed to meet different needs. Consider your typical activities, the number of dogs, and your preference for the amount of food or treats you will carry to choose the one that best fits your lifestyle. A convenient accessory to enhance your experience is our Adventure Clip, designed to make it effortless to carry and use multiple pouches at once! </p>
-                                </ul>
-                            </div>
-                        </div>   */}
-
                         {faqItems.map((item, index) => (
                             <div key={index} className="border rounded mt-4 overflow-hidden">
                                 <button

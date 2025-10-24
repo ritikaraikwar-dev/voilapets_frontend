@@ -1,6 +1,5 @@
 import mini1 from '../assets/img/mini1.webp';
 import StarIcon from '@mui/icons-material/Star';
-import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import LanguageIcon from '@mui/icons-material/Language';
 import StarHalfIcon from '@mui/icons-material/StarHalf';
 import beltc1 from '../assets/img/beltc1.webp';
@@ -13,10 +12,9 @@ import beltc7 from '../assets/img/beltc7.webp';
 import beltc8 from '../assets/img/beltc8.webp';
 import { useCart } from '../context/CartContext';
 import products from '../data/Product';
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
-import { circularProgressClasses } from '@mui/material/CircularProgress';
+ 
 
 function EssentialHatShop() {
 

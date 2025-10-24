@@ -29,28 +29,23 @@ function Elegance() {
                 <div className='py-16 px-6 bg-[#F5FCF8]'>
                     <div><p className="text-xl uppercase tracking-wider lg:text-3xl text-center font-bold text-[#53565A]"> Elegance and Sustainability for Modern Pet Lovers </p>
                         <p className='text-center py-4 text-[#53565A] text-md  lg:text-lg lg:px-40'>Voilà is dedicated to fostering meaningful connections between people and their pets. We design aesthetically pleasing, eco-friendly products that prioritize both sustainability and user-friendliness.</p></div>
-
                     <div className='container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4'>
                         <img src={pet1} alt="" className='rounded-md h-full' />
                         <img src={pet2} alt="" className='rounded-md h-full ' />
                     </div>
-
-                     
-
                     <div className='py-6 gap-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
-                       
-                       {
-                        data.map((item,index)=>{
-                            return(
-                                <>
-                                  <div key={index} className='rounded-md py-6 px-6 flex justify-center items-center gap-6 bg-[#D8E2DC] text-[#5B565A] '>
-                            <img src={item.img} alt="" className='h-16' />
-                            <p className='font-bold'>{item.des}</p>
-                        </div>
-                                </>
-                            )
-                        })
-                       }             
+                        {
+                            data.map((item, index) => {
+                                return (
+                                    <>
+                                        <div key={index} className='rounded-md py-6 px-6 flex justify-center items-center gap-6 bg-[#D8E2DC] text-[#5B565A] '>
+                                            <img src={item.img} alt="" className='h-16' />
+                                            <p className='font-bold'>{item.des}</p>
+                                        </div>
+                                    </>
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </section>

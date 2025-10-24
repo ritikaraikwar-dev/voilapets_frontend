@@ -1,12 +1,10 @@
 import { useRef } from 'react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
 import miniswiper1 from '../assets/img/miniswiper1.webp';
 import miniswiper3 from '../assets/img/miniswiper3.webp';
 import miniswiper4 from '../assets/img/miniswiper4.webp';
@@ -19,10 +17,7 @@ function ShopSwiper() {
     return (
         <section className="bg-white py-14 px-8">
             
-            <div
-
-            >
-
+            <div>
                 <Swiper
                     className="w-full"
                     modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -49,9 +44,7 @@ function ShopSwiper() {
                                 className="w-full h-full object-cover rounded-md"
                             />
                         </div>
-                    </SwiperSlide>
-
-                   
+                    </SwiperSlide>  
                     <SwiperSlide>
                         <div className="w-full  aspect-[4/3]  ">
                             <video
@@ -64,8 +57,6 @@ function ShopSwiper() {
                             />
                         </div>
                     </SwiperSlide>
-
-                    
                     <SwiperSlide>
                         <div className="w-full   aspect-[4/3]  ">
                             <img
@@ -115,9 +106,6 @@ function ShopSwiper() {
                         </div>
                     </SwiperSlide>
                 </Swiper>
-
-
-
             </div>
         </section>
     );

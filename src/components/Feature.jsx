@@ -47,16 +47,10 @@ function Feature() {
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </>
                             )
                         })
                     }
-
-
-
-
                 </div>
             </section>
         </>

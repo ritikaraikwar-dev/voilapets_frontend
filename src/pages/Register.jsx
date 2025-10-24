@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 const baseUrl = process.env.REACT_APP_BASE_URL;
-
 function Register() {
 
     const [showOtp, setShowOtp] = useState(false);
@@ -15,7 +14,6 @@ function Register() {
         password: "",
         otp: ""
     });
-
     const handleForm = async (e) => {
         try {
             const { name, value } = e.target;
@@ -68,8 +66,6 @@ function Register() {
 
         return isValid;
     }
-
-
     const sentOtp = async (e) => {
         e.preventDefault();
         if (!validate()) {
@@ -86,7 +82,6 @@ function Register() {
         }
 
     }
-
     const register = async (e) => {
         e.preventDefault();
         try {
@@ -99,24 +94,16 @@ function Register() {
         }
 
     }
-
-
-
     return (
         <>
             <section className='relative bg-[#F5FCF8] py-16 px-8 '>
                 <Toaster />
                 <div className='pt-4 '>
                     <h2 className='uppercase text-center pt-14  text-3xl tracking-wide font-bold text-[#53565A]'>Create account</h2>
-
                 </div>
 
                 <div className="flex justify-center items-center">
                     <form className='w-1/3 px-0 bg-transparent p-6 rounded-md  '>
-
-
-
-
                         <div className="relative w-full mb-6">
                             <input
                                 type="text"
@@ -164,10 +151,6 @@ function Register() {
                                 <p className="text-red-500 text-sm mt-1">{error.lastName}</p>
                             )}
                         </div>
-
-
-                         
-
                         <div className="relative w-full mb-6">
                             <input
                                 type="email"
@@ -216,8 +199,6 @@ function Register() {
                             }
 
                         </div>
-
-
                         {showOtp && (
                             <div className="relative w-full mb-2">
                                 <input
@@ -242,13 +223,7 @@ function Register() {
                                 }
                             </div>
                         )}
-
                         <div> <input type="checkbox" className="text-xl" /> <label htmlFor="" className="px-1 text-[#4B5563]"> Email me with news and offers. </label>  </div>
-
-
-
-
-
                         <div className='w-2/4 mx-auto flex justify-center'>
                             {
                                 showOtp ? (
@@ -270,25 +245,14 @@ function Register() {
                                     </button>
                                 )
                             }
-
-
-
-
                         </div>
-
-
-
                         <div className="text-center mt-4">
                             <Link to="/login" className="text-[#4B5563]  underline">
                                 Login
                             </Link>
                         </div>
-
                     </form>
-
-
                 </div>
-
             </section >
         </>
     )

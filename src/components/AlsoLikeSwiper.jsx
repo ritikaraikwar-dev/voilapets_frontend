@@ -191,17 +191,11 @@ function AlsoLikeSwiper() {
                                             </div>
                                         </div>
                                     </div>
-
-
-
                                 </SwiperSlide>
                             </>
                         )
                     })
                 }
-
-
-
             </Swiper>
         </section>
     );

@@ -1,12 +1,10 @@
 import { useRef } from 'react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
 import yahoolife from '../assets/img/Yahoo-Life-Logo.png';
 import esquire from '../assets/img/esquire.svg';
 import msn from '../assets/img/MSN_logo_PNG.webp';
@@ -42,15 +40,15 @@ function AsSeenSwiper() {
                     }}
 
                     breakpoints={{
-                        250: { slidesPerView: 2 },   
+                        250: { slidesPerView: 2 },
                         640: { slidesPerView: 2 },
                         768: { slidesPerView: 3 },
                         1024: { slidesPerView: 5 }
                     }}
-                    onSwiper={(swiper) => (swiperRef.current = swiper)}  
+                    onSwiper={(swiper) => (swiperRef.current = swiper)}
                     className="overflow-hidden"
-                    speed={3000}  
-                    allowTouchMove={false}  
+                    speed={3000}
+                    allowTouchMove={false}
                     grabCursor={false}
 
                 >

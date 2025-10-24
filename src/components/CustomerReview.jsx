@@ -17,51 +17,50 @@ function CustomerReview() {
                         <div>
 
                             <ul>
-                                <li className='flex gap-3 items-center'> <span   className='text-[#FFC200]'> <StarIcon sx={{ fontSize: 17 }}/> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> </span> <label for="disk_c"> </label>
+                                <li className='flex gap-3 items-center'> <span className='text-[#FFC200]'> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> </span> <label for="disk_c"> </label>
                                     <div className="w-64 h-4 bg-[#F4F2F0] rounded-lg  overflow-hidden">
-                                         
+
                                         <div
                                             className="h-full bg-[#D5DFD9] transition-all duration-500"
-                                            style={{ width: '80%' }}  
+                                            style={{ width: '80%' }}
                                         />
                                     </div> <p>19</p> </li>
 
-                                      <li className='flex gap-3 items-center'> <span   className='text-[#FFC200]'> <StarIcon sx={{ fontSize: 17 }}/> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> </span> <label for="disk_c"> </label>
+                                <li className='flex gap-3 items-center'> <span className='text-[#FFC200]'> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> </span> <label for="disk_c"> </label>
                                     <div className="w-64 h-4 bg-[#F4F2F0] rounded-lg  overflow-hidden">
-                                        
+
                                         <div
                                             className="h-full bg-[#D5DFD9] transition-all duration-500"
-                                            style={{ width: '20%' }}   
+                                            style={{ width: '20%' }}
                                         />
                                     </div> <p>3</p> </li>
 
-                                      <li className='flex gap-3 items-center'> <span   className='text-[#FFC200]'> <StarIcon sx={{ fontSize: 17 }}/> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> </span> <label for="disk_c"> </label>
+                                <li className='flex gap-3 items-center'> <span className='text-[#FFC200]'> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> </span> <label for="disk_c"> </label>
                                     <div className="w-64 h-4 bg-[#F4F2F0] rounded-lg  overflow-hidden">
-                                         
+
                                         <div
                                             className="h-full bg-[#D5DFD9] transition-all duration-500"
-                                            style={{ width: '0%' }}   
+                                            style={{ width: '0%' }}
                                         />
                                     </div> <p>0</p> </li>
 
-                                      <li className='flex gap-3 items-center'> <span   className='text-[#FFC200]'> <StarIcon sx={{ fontSize: 17 }}/> <StarIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> </span> <label for="disk_c"> </label>
+                                <li className='flex gap-3 items-center'> <span className='text-[#FFC200]'> <StarIcon sx={{ fontSize: 17 }} /> <StarIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> </span> <label for="disk_c"> </label>
                                     <div className="w-64 h-4 bg-[#F4F2F0] rounded-lg  overflow-hidden">
-                                       
+
                                         <div
                                             className="h-full bg-[#D5DFD9] transition-all duration-500"
-                                            style={{ width: '0%' }}   
+                                            style={{ width: '0%' }}
                                         />
                                     </div> <p>0</p> </li>
 
-                                      <li className='flex gap-3 items-center'> <span   className='text-[#FFC200]'> <StarIcon sx={{ fontSize: 17 }}/> <StarOutlineIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> </span> <label for="disk_c"> </label>
+                                <li className='flex gap-3 items-center'> <span className='text-[#FFC200]'> <StarIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> <StarOutlineIcon sx={{ fontSize: 17 }} /> </span> <label for="disk_c"> </label>
                                     <div className="w-64 h-4 bg-[#F4F2F0] rounded-lg  overflow-hidden">
-                                       
+
                                         <div
                                             className="h-full bg-[#D5DFD9] transition-all duration-500"
-                                            style={{ width: '0%' }}   
+                                            style={{ width: '0%' }}
                                         />
                                     </div> <p>1</p> </li>
-                               
                             </ul>
                         </div>
                         <div></div>

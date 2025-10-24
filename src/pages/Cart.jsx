@@ -2,17 +2,12 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import CloseIcon from '@mui/icons-material/Close';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
-import React, { useEffect, useState } from 'react';
+import { useEffect,  } from 'react';
 import axios from 'axios';
-import { circularProgressClasses } from '@mui/material/CircularProgress';
 const baseUrl = process.env.REACT_APP_BASE_URL;
 function Cart() {
-  const [localCartItems, setLocalCartItems] = useState([]);
-  const { cart, guestId, setCart, reloadCart, setReloadCart, getGuestId, removeFromCart, clearCart } = useCart();
-
-
-
-  // const { cartItems, setCartItems, cart, setCart, removeFromCart, clearCart } = useCart();
+ 
+  const { cart, guestId, setCart, reloadCart, setReloadCart,localCartItems, setLocalCartItems} = useCart();
 
   const deleteCart = async (cartId) => {
 
@@ -35,10 +30,10 @@ function Cart() {
     const fetchCartItems = async () => {
       const guest_Id = guestId;
       try {
-    // Frontend request
-const res = await axios.get(`${baseUrl}/voilapets/getCart/${guest_Id}`, {
-  withCredentials: true
-});
+        // Frontend request
+        const res = await axios.get(`${baseUrl}/voilapets/getCart/${guest_Id}`, {
+          withCredentials: true
+        });
 
         console.log("Cart API Response:", res.data);
 
@@ -60,12 +55,12 @@ const res = await axios.get(`${baseUrl}/voilapets/getCart/${guest_Id}`, {
 
 
   return (
-    
+
     <>
       <section className='relative'>
         <div className={`px-4 fixed top-0 right-0 h-full w-96 bg-[#F5FCF8] shadow-lg z-50 transform transition-transform duration-600 ease-in-out ${cart ? 'translate-x-0' : 'translate-x-full'
           }`}
-                   
+
         >
           {
             localCartItems.length > 0 ? (
@@ -89,17 +84,14 @@ const res = await axios.get(`${baseUrl}/voilapets/getCart/${guest_Id}`, {
                 </div>
 
                 <div>
-
-                 
-
                   <div className="max-h-[500px] overflow-y-auto flex flex-col gap-6 pr-2">
                     {localCartItems.map(item => (
                       <div key={item._id} className="border-b pb-4 flex gap-4">
 
-                       
+
                         <img src={item.image} alt={item.title} className="w-24 h-24 object-cover rounded" />
 
-                      
+
                         <div className="flex flex-col justify-between flex-1">
                           <div>
                             <h3 className="font-semibold text-base">{item.title}</h3>
@@ -107,9 +99,9 @@ const res = await axios.get(`${baseUrl}/voilapets/getCart/${guest_Id}`, {
                             <p className="font-bold text-[#53565A] mt-2">${item.price} AUD</p>
                           </div>
 
-                      
+
                           <div className="flex justify-between items-center mt-4">
-                            
+
                             <div className="flex items-center border px-4 py-2 rounded text-[#53565A] gap-4">
                               <button>-</button>
                               <span>{item.quantity}</span>
@@ -159,16 +151,9 @@ const res = await axios.get(`${baseUrl}/voilapets/getCart/${guest_Id}`, {
                   </p>
                 </div>
               </div>
-
-
             )
           }
-
-
-
         </div>
-
-        
       </section>
     </>
   );

@@ -30,24 +30,24 @@ function Login() {
             const res = await axios.post(`${baseUrl}/voilapets/userLogin`, formData);
 
             console.log("user login successfully", res.data);
-              toast.success('User Login successfully !');
-             
+            toast.success('User Login successfully !');
+
         } catch (error) {
             console.log("error occur", error);
         }
 
     }
 
-   
+
 
     return (
         <>
             <section className='relative bg-[#F5FCF8] py-24 px-8 '>
-                     <Toaster  />
-                      
+                <Toaster />
+
 
                 <div className='  pt-24 pb-8'>
-                    
+
                     <h2 className='uppercase text-center   text-3xl tracking-wide font-bold text-[#53565A] '>Login</h2>
 
                 </div>
@@ -80,8 +80,8 @@ function Login() {
                                 id="password"
                                 name="password" value={formData.password} onChange={handleForm}
                                 placeholder=" "
-                                 className="peer bg-transparent border border-[#93A2AE] w-full pt-6 pb-2 px-3 rounded outline-none hover:ring-1 hover:ring-[#93A2AE] placeholder-transparent"
-                             />
+                                className="peer bg-transparent border border-[#93A2AE] w-full pt-6 pb-2 px-3 rounded outline-none hover:ring-1 hover:ring-[#93A2AE] placeholder-transparent"
+                            />
                             <label
                                 htmlFor="password"
                                 className="absolute left-3 top-1 text-sm text-[#7B7F81] transition-all
@@ -97,8 +97,6 @@ function Login() {
                                 Forgot your password?
                             </Link>
                         </div>
-
-
                         <div className='w-2/4 mx-auto flex justify-center'>
                             <button
                                 type="submit"
@@ -106,8 +104,6 @@ function Login() {
                             >
                                 Sign In
                             </button>
-
-
                         </div>
                         <div className="text-center mt-4">
                             <Link to="/register" className="text-[#4B5563]  underline">
@@ -120,14 +116,8 @@ function Login() {
                                 Create Wholsale Account
                             </Link>
                         </div>
-
                     </form>
-
-
-
-
                 </div>
-
             </section>
         </>
     )

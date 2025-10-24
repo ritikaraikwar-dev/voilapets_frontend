@@ -264,7 +264,6 @@ function WholeSaleAccount() {
                     <h2 className='uppercase text-center   text-3xl tracking-wide font-bold text-[#53565A] '>Request a wholesale account</h2>
 
                 </div>
-
                 <p className="text-center text-lg tracking-loose text-[#53565A]">Interested in becoming a dealer? Please fill out the application below.</p>
 
                 <p className="   text-center  text-lg tracking-loose py-4 text-[#53565A]   ">Already have an account? <Link className="underline" to='/login'> Login here</Link> </p>  
@@ -524,40 +523,6 @@ function WholeSaleAccount() {
                                 />
 
                             </div>
-
-                            {/* <div className="relative w-full mt-1 ">
-
-                                <label
-                                    htmlFor="name"
-                                    className="text-sm   text-[#53565A]"
-                                >
-                                    Country  <span className="text-[#FD4828]">*</span>
-                                </label>
-
-                                <select
-
-                                    name="enquiry"
-                                    id="enquiry"
-                                    defaultValue=""
-                                    value={selectedCountry}
-          onChange={(e) => setSelectedCountry(e.target.value)}
-                                    required
-                                    className=" bg-transparent border border-[#93A2AE] w-full   rounded outline-none   text-black  py-3  "
-                                >
-
-                                    
-                                    <div className="bg-white text-black"> 
-                                    {countries.map((country) => (
-                                        <option key={country} value={country.toLowerCase().replace(/ /g, "-")}>
-                                            {country}
-                                        </option>
-                                    ))}
-                                    </div>
-                                </select>
-
-
-                            </div> */}
-
                             <div className="relative w-full mt-1">
                                 <label htmlFor="country" className="text-sm text-[#53565A]">
                                     Country <span className="text-[#FD4828]">*</span>
@@ -586,9 +551,7 @@ function WholeSaleAccount() {
                         <div className='flex gap-4 mb-3'>
 
                             {/* Conditionally Render State Field if Country is United States */}
-                           
-
-
+                        
                             {selectedCountry === "United States" && (
                                 <div className="relative w-full mt-1">
                                     <label htmlFor="state" className="text-sm text-[#53565A]">

@@ -10,9 +10,7 @@ import gallery9 from '../assets/img/gallery9.webp';
 import gallery10 from '../assets/img/gallery10.webp';
 import gallery11 from '../assets/img/gallery11.webp';
 import gallery12 from '../assets/img/gallery12.webp';
- 
- 
- 
+  
 const data = [
     
      {

@@ -13,11 +13,6 @@ function ForgotPassword(){
 
                 <div className="flex justify-center items-center">
                     <form className='w-1/3 px-0 bg-transparent p-6 rounded-md  '>
-
-
-
-
-
                         <div className="relative w-full mb-6">
                             <input
                                 type="email"
@@ -55,16 +50,8 @@ function ForgotPassword(){
                                 Cancel
                             </Link>
                         </div>
-
-                        
-
                     </form>
-
-
-
-
                 </div>
-
             </section>
         </>
     )

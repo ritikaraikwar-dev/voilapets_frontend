@@ -1,19 +1,4 @@
-import cap1 from '../assets/img/cap1.webp';
-import cap2 from '../assets/img/cap2.webp';
-import clip1 from '../assets/img/clip1.webp';
-import clip2 from '../assets/img/clip2.webp';
-import mini1 from '../assets/img/miniultimate1.webp';
-import mini2 from '../assets/img/miniultimate2.webp';
-import accesory1 from '../assets/img/newaccessories1.webp';
-import accesory2 from '../assets/img/newaccessories2.webp';
-import belt from '../assets/img/belt1.webp';
-import StarIcon from '@mui/icons-material/Star';
 import { useEffect, useState } from 'react';
-
-
-
-
- 
 function Arrival() {
 
     const [data, setData] = useState([]);
@@ -98,7 +83,6 @@ function Arrival() {
                                                 </div>
                                             </div>
                                         </div>
-
                                     </>
                                 )
                             })

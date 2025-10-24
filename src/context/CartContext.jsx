@@ -2,6 +2,8 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import products from '../data/Product';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CartContext = createContext();
 
@@ -17,7 +19,7 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(false);
   const baseUrl = process.env.REACT_APP_BASE_URL;
   const[guestId,setguestId] = useState();
-
+  const [localCartItems, setLocalCartItems] = useState([]);
 
 
   const showCart = () => {
@@ -50,6 +52,18 @@ export const CartProvider = ({ children }) => {
       
       console.log("guest id from context",guestId);
       
+      // Check if this item already exists in the cart
+    const alreadyInCart = localCartItems.some(item => item.id === id);
+
+        if (alreadyInCart) {
+      // Show message instead of adding again
+      console.log("Item already in cart!");
+     // alert("This item is already in your cart!"); // or toast
+
+      toast.info('This item is already in your cart !');
+       
+      return;
+    }
       const payload = {
         ...product,
         quantity: 1,
@@ -58,21 +72,21 @@ export const CartProvider = ({ children }) => {
       const data = await axios.post(`${baseUrl}/voilapets/addCart/${id}`, payload, {
         withCredentials: true,
       });
-      setReloadCart(prev => !prev);
+       setReloadCart(prev => !prev);
 
       console.log("data send successfully", data.data.userData);
-    }
+      }
+      
+      
+ 
     catch (error) {
       console.log(error.message);
     }
   }
 
-
-
-
-  return (
+return (
     <CartContext.Provider
-      value={{ handleCart, cartItems, reloadCart, setReloadCart, cart, setCart, guestId, showCart, getGuestId }}
+      value={{ localCartItems, setLocalCartItems, handleCart, cartItems, setCartItems , reloadCart, setReloadCart, cart, setCart, guestId, showCart, getGuestId }}
     >
       {children}
     </CartContext.Provider>

@@ -13,12 +13,12 @@ function ShopByColorSwiper() {
   const swiperRef = useRef(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
-  const [hasSlides, setHasSlides] = useState(true);  
- 
+  const [hasSlides, setHasSlides] = useState(true);
+
   const updateNavigationState = (swiper) => {
     setIsBeginning(swiper.isBeginning);
     setIsEnd(swiper.isEnd);
-    
+
     setHasSlides(swiper.slides.length > swiper.params.slidesPerView);
   };
 
@@ -31,7 +31,7 @@ function ShopByColorSwiper() {
   };
 
   useEffect(() => {
-    
+
     if (swiperRef.current) {
       updateNavigationState(swiperRef.current);
     }
@@ -44,7 +44,7 @@ function ShopByColorSwiper() {
         <p className='text-center '>Shop all</p>
       </div>
 
-      
+
       {hasSlides && !isBeginning && (
         <button
           onClick={goPrev}
@@ -65,97 +65,97 @@ function ShopByColorSwiper() {
         </button>
       )}
 
-<div className='container mx-auto'> 
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={20}
-        slidesPerView={4}
-        onSwiper={(swiper) => {
-          swiperRef.current = swiper;
-          updateNavigationState(swiper);
-        }}
-        onSlideChange={(swiper) => {
-          console.log('slide change');
-          updateNavigationState(swiper);
-        }}
-        breakpoints={{
-                        300: { slidesPerView: 1 },
-                        768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 4 },
-                    }}
-      >
-        <SwiperSlide>
-          <div className="bg-[#D8E2DC] group w-fit overflow-hidden px-4 py-4 rounded-[15px]">
-            <div className="flex justify-center mb-4">
-              <img
-                src={var2}
-                alt="Charcoal product"
-                width={400}
-                className="rounded-md"
-              />
+      <div className='container mx-auto'>
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={20}
+          slidesPerView={4}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+            updateNavigationState(swiper);
+          }}
+          onSlideChange={(swiper) => {
+            console.log('slide change');
+            updateNavigationState(swiper);
+          }}
+          breakpoints={{
+            300: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 },
+          }}
+        >
+          <SwiperSlide>
+            <div className="bg-[#D8E2DC] group w-fit overflow-hidden px-4 py-4 rounded-[15px]">
+              <div className="flex justify-center mb-4">
+                <img
+                  src={var2}
+                  alt="Charcoal product"
+                  width={400}
+                  className="rounded-md"
+                />
+              </div>
+              <p className="mb-4 text-center text-2xl font-semibold text-[#53565A] leading-tight">
+                Charcoal / Longer Length (fits up to 60" waist)
+              </p>
+              <p className="text-center mb-10">Explore Now</p>
             </div>
-            <p className="mb-4 text-center text-2xl font-semibold text-[#53565A] leading-tight">
-              Charcoal / Longer Length (fits up to 60" waist)
-            </p>
-            <p className="text-center mb-10">Explore Now</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-[#D8E2DC] px-4 py-4 rounded-[15px]">
-            <div className="flex justify-center mb-4">
-              <img src={var2} alt="Charcoal product" width={400} className="rounded-md" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="bg-[#D8E2DC] px-4 py-4 rounded-[15px]">
+              <div className="flex justify-center mb-4">
+                <img src={var2} alt="Charcoal product" width={400} className="rounded-md" />
+              </div>
+              <p className="mb-4 text-center text-2xl font-semibold text-[#53565A] leading-tight">
+                Charcoal / Longer Length (fits up to 60" waist)
+              </p>
+              <p className="text-center mb-10">Explore Now</p>
             </div>
-            <p className="mb-4 text-center text-2xl font-semibold text-[#53565A] leading-tight">
-              Charcoal / Longer Length (fits up to 60" waist)
-            </p>
-            <p className="text-center mb-10">Explore Now</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-[#D8E2DC] px-4 py-4 rounded-[15px]">
-            <div className="flex justify-center mb-4">
-              <img src={var2} alt="Charcoal product" width={400} className="rounded-md" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="bg-[#D8E2DC] px-4 py-4 rounded-[15px]">
+              <div className="flex justify-center mb-4">
+                <img src={var2} alt="Charcoal product" width={400} className="rounded-md" />
+              </div>
+              <p className="mb-4 text-center text-2xl font-semibold text-[#53565A] leading-tight">
+                Charcoal / Longer Length (fits up to 60" waist)
+              </p>
+              <p className="text-center mb-10">Explore Now</p>
             </div>
-            <p className="mb-4 text-center text-2xl font-semibold text-[#53565A] leading-tight">
-              Charcoal / Longer Length (fits up to 60" waist)
-            </p>
-            <p className="text-center mb-10">Explore Now</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-[#D8E2DC] px-4 py-4 rounded-[15px]">
-            <div className="flex justify-center mb-4">
-              <img src={var2} alt="Charcoal product" width={400} className="rounded-md" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="bg-[#D8E2DC] px-4 py-4 rounded-[15px]">
+              <div className="flex justify-center mb-4">
+                <img src={var2} alt="Charcoal product" width={400} className="rounded-md" />
+              </div>
+              <p className="mb-4 text-center text-2xl font-semibold text-[#53565A] leading-tight">
+                Charcoal / Longer Length (fits up to 60" waist)
+              </p>
+              <p className="text-center mb-10">Explore Now</p>
             </div>
-            <p className="mb-4 text-center text-2xl font-semibold text-[#53565A] leading-tight">
-              Charcoal / Longer Length (fits up to 60" waist)
-            </p>
-            <p className="text-center mb-10">Explore Now</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-[#D8E2DC] px-4 py-4 rounded-[15px]">
-            <div className="flex justify-center mb-4">
-              <img src={var2} alt="Charcoal product" width={400} className="rounded-md" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="bg-[#D8E2DC] px-4 py-4 rounded-[15px]">
+              <div className="flex justify-center mb-4">
+                <img src={var2} alt="Charcoal product" width={400} className="rounded-md" />
+              </div>
+              <p className="mb-4 text-center text-2xl font-semibold text-[#53565A] leading-tight">
+                Charcoal / Longer Length (fits up to 60" waist)
+              </p>
+              <p className="text-center mb-10">Explore Now</p>
             </div>
-            <p className="mb-4 text-center text-2xl font-semibold text-[#53565A] leading-tight">
-              Charcoal / Longer Length (fits up to 60" waist)
-            </p>
-            <p className="text-center mb-10">Explore Now</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-[#D8E2DC] px-4 py-4 rounded-[15px]">
-            <div className="flex justify-center mb-4">
-              <img src={var2} alt="Charcoal product" width={400} className="rounded-md" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="bg-[#D8E2DC] px-4 py-4 rounded-[15px]">
+              <div className="flex justify-center mb-4">
+                <img src={var2} alt="Charcoal product" width={400} className="rounded-md" />
+              </div>
+              <p className="mb-4 text-center text-2xl font-semibold text-[#53565A] leading-tight">
+                Charcoal / Longer Length (fits up to 60" waist)
+              </p>
+              <p className="text-center mb-10">Explore Now</p>
             </div>
-            <p className="mb-4 text-center text-2xl font-semibold text-[#53565A] leading-tight">
-              Charcoal / Longer Length (fits up to 60" waist)
-            </p>
-            <p className="text-center mb-10">Explore Now</p>
-          </div>
-        </SwiperSlide>
-      </Swiper>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
   );

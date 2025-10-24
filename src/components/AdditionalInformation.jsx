@@ -3,9 +3,7 @@ import faq from '../assets/img/faq.webp';
 import faq2 from '../assets/img/faq2.webp';
 import CloseIcon from '@mui/icons-material/Close';
 import AddIcon from '@mui/icons-material/Add';
-import { Link } from 'react-router-dom';
-
-
+ 
 const faqItems = [
     {
         question: "What Makes Our Ultimate Treat Pouch™ Stand Out?",
@@ -31,10 +29,6 @@ const faqItems = [
         question: "How do I submit a warranty claim?",
         answer: "We accept returns and exchanges within 30 days of delivery. Items must be in their original packaging, unused, and in salable condition—free from damage, marks, stains, or pet fur. Returns must be shipped out within the 30-day window to qualify for a refund. International returns are not accepted. Refunds are issued to the original payment method within 5-7 business days after we receive and inspect your return, with return shipping costs deducted from the refund. Exchanges are offered within the same 30-day period and are subject to availability; if the requested item is unavailable, we will process your return as a refund. To initiate the return process, please Contact Us and enter your order information.",
     },
-
-
-
-
 ]
 function AdditionalInformation() {
 
@@ -43,24 +37,11 @@ function AdditionalInformation() {
     const toggleContent = (index) => {
         setActiveIndex(prev => (prev === index ? null : index));
     };
-
-
-
     return (
         <>
             <section className="relative bg-[#D8E2DC]  py-20 px-8 group overflow-hidden">
-
-
-
-
-
-            
-
-
-                    <div  >
+                    <div>
                         <p className='uppercase text-3xl text-center font-bold pb-10   text-[#4B4D51]'>Additional Information</p>
-
-
 
                         <div className='rounded-md bg-[#F5FCF8] px-6'>
 
@@ -89,11 +70,7 @@ function AdditionalInformation() {
 
                             ))}
                         </div>
-
-
                     </div>
-                
-
             </section>
         </>
     )

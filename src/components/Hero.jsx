@@ -3,7 +3,6 @@ function Hero(){
     return(
         <>
          <div className='relative '>
-
                     <video className='w-full h-auto' autoPlay muted loop playsInline >
                         <source src={voilapetshome} type="video/mp4" />
                         Your browser does not support the video tag.

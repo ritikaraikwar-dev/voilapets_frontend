@@ -21,7 +21,6 @@ function Ultimate() {
                             style={{ transformOrigin: "center" }}
                         />
                     </div>
-
                 </div>
             </section>
         </>
