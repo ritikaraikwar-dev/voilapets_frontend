@@ -23,7 +23,15 @@ import SealablePage from './pages/SealablePage';
 import AdventureClipPage from './pages/AdventureClipPage';
 import MiniAdventureClip from './pages/MiniAdventureClip';
 import EssentialHatPage from './pages/EssentialHatPage';
+ 
+import { useCart } from './context/CartContext';
 function App() {
+
+ const { getGuestId } = useCart();
+
+const guestId = getGuestId();
+console.log('Guest ID (UUID):', guestId);
+
   return (
     <>
 

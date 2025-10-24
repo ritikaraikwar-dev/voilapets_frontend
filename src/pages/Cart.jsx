@@ -8,7 +8,7 @@ import { circularProgressClasses } from '@mui/material/CircularProgress';
 const baseUrl = process.env.REACT_APP_BASE_URL;
 function Cart() {
   const [localCartItems, setLocalCartItems] = useState([]);
-  const { cart, setCart, reloadCart, setReloadCart, getGuestId, removeFromCart, clearCart } = useCart();
+  const { cart, guestId, setCart, reloadCart, setReloadCart, getGuestId, removeFromCart, clearCart } = useCart();
 
 
 
@@ -33,10 +33,12 @@ function Cart() {
 
   useEffect(() => {
     const fetchCartItems = async () => {
+      const guest_Id = guestId;
       try {
-        const res = await axios.get(`${baseUrl}/voilapets/getCart`, {
-          withCredentials: true
-        });
+    // Frontend request
+const res = await axios.get(`${baseUrl}/voilapets/getCart/${guest_Id}`, {
+  withCredentials: true
+});
 
         console.log("Cart API Response:", res.data);
 
